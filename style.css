@@ -1,0 +1,182 @@
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(0, 0, 0);
+  justify-items: center;
+  border-radius: 10px;
+}
+.item {
+  background-color: rgb(255, 255, 255);
+  color: rgb(3, 0, 0);
+  font-family: lexend, sans-serif;
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+  text-align: left;
+  flex-grow: 1;
+  border-radius: 10px;
+}
+.flexrow {
+  flex-wrap: wrap;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+.container {
+  width: 20%;
+  justify-content: center; /*justidficado no centro*/
+  margin: 10px;
+  color: rgb(0, 136, 255);
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.container:nth-child(1) {
+  width: 23%;
+  height: 40px;
+  align-items: center; /*em relação ao eixo y*/
+  justify-content: center; /*justidficado no centro*/
+  margin: 10px;
+  color: rgb(0, 136, 255);
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.container:nth-child(2) {
+  width: 23%;
+  height: 50px;
+  align-items: center; /*em relação ao eixo y*/
+  justify-content: center; /*justidficado no centro*/
+  margin: 10px;
+  color: rgb(0, 136, 255);
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.container:nth-child(3) {
+  width: 23%;
+  height: 60px;
+  align-items: center; /*em relação ao eixo y*/
+  justify-content: center; /*justidficado no centro*/
+  margin: 10px;
+  color: rgb(0, 136, 255);
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.container:nth-child(4) {
+  width: 23%;
+  height: 70px;
+  align-items: center; /*em relação ao eixo y*/
+  justify-content: center; /*justidficado no centro em relação ao eixo X*/
+  margin: 10px;
+  color: rgb(0, 136, 255);
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center; /*centralizado no eixo x */
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+.fcontainer {
+  width: 30%;
+  height: 70px;
+  align-items: center; /*em relação ao eixo y*/
+  justify-content: center; /*justidficado no centro*/
+  margin: 10px;
+  color: rgb(0, 136, 255);
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.flexgrid {
+  display: flex;
+  align-items: center;
+  flex-direction: column; /*se eu inverter o grid será empilhado*/
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  gap: 10px;
+}
+.flexgrid1 {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column; /*se eu inverter o grid será empilhado*/
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  gap: 10px;
+}
+.flexgrid2 {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  background-color: rgb(78, 74, 74);
+  border-radius: 10px;
+}
+.grid {
+  height: 100px;
+  margin-left: 10px;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.gridcontainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.gridarea {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas:
+    "header header"
+    "nav main"
+    "footer footer";
+}
+.griditem:nth-child(1) {
+  background: red;
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.griditem:nth-child(2) {
+  background-color: rgb(245, 245, 2);
+  grid-area: nav;
+}
+.griditem:nth-child(3) {
+  background-color: rgb(143, 143, 121);
+  grid-area: main;
+}
+.griditem:nth-child(4) {
+  background-color: royalblue;
+  grid-area: footer;
+}
+@media (max-width: 600px) {
+  .gridarea {
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+  .griditem:nth-child(2) {
+    background-color: rgb(245, 245, 2);
+    visibility: hidden;
+  }
+}
